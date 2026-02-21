@@ -8,5 +8,5 @@
 - ImageRequest/ImageResult include provider, size, style, language, cultural_context, quality, seed, and metadata defaults.
 - AudioRequest/AudioResult include provider, voice, language, rate, ElevenLabs settings, and metadata defaults.
 - DeckRequest/DeckResult include optional media/output_path plus metadata defaults.
-- Provider protocols are ImageProvider, ImageEvaluator, AudioProvider, DeckGenerator, and DeckExporter.
+- Provider and evaluator protocols: Evaluator (generic base), PromptGenerator, ImageProvider, ImageEvaluator, AudioProvider, AudioEvaluator, DeckGenerator, DeckExporter, and DeckEvaluator.
 - EvaluationResult and PromptBundle contracts are included for orchestrator evaluation flows.
