@@ -3,7 +3,7 @@ name = "punt-langlearn-types"
 version = "0.1.0"
 description = "Shared interfaces and data models for LangLearn tooling."
 readme = "README.md"
-authors = [{ name = "JF", email = "jmf@pobox.com" }]
+authors = [{ name = "Punt Labs" }]
 requires-python = ">=3.13"
 license = "MIT"
 dependencies = [
