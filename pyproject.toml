@@ -9,20 +9,12 @@ license = "MIT"
 classifiers = [
     "Development Status :: 3 - Alpha",
 ]
-dependencies = [
-    "mcp>=1.0.0",
-    "typer>=0.12.0",
-    "rich>=13.7.0",
-]
+dependencies = []
 
 [project.urls]
 Homepage = "https://github.com/punt-labs/langlearn-types"
 Repository = "https://github.com/punt-labs/langlearn-types"
 "Bug Tracker" = "https://github.com/punt-labs/langlearn-types/issues"
-
-[project.scripts]
-langlearn-types = "langlearn_types.cli:app"
-langlearn-types-server = "langlearn_types.server:run_server"
 
 [project.optional-dependencies]
 dev = [
@@ -117,7 +109,3 @@ exclude_lines = [
 ]
 show_missing = true
 precision = 2
-
-[[tool.mypy.overrides]]
-module = ["typer.*", "mcp.*"]
-ignore_missing_imports = true
