@@ -60,6 +60,24 @@ Do **not** merge immediately after creating a PR. Expect **2–6 review cycles**
 
 This project uses **beads** (`bd`) for issue tracking. If an issue discovered here affects multiple repos or requires a standards change, escalate to a [punt-kit bead](https://github.com/punt-labs/punt-kit) instead (see [bead placement scheme](../CLAUDE.md#where-to-create-a-bead)).
 
+## Ethos & Delegation
+
+Identity: `agent: claude` per `.punt-labs/ethos.yaml`. Sub-agent calls match ethos identity handles.
+
+This repo is the *types* library. Every change here propagates to consumers (langlearn, langlearn-tts, langlearn-anki, langlearn-imagegen). Protocol stability is the load-bearing property — engage `gvr` (van Rossum) as evaluator on any protocol change. Worker and evaluator must be distinct handles with no shared role. Claude is the leader, never the evaluator.
+
+| Task type | Worker | Evaluator |
+|-----------|--------|-----------|
+| New protocol / type addition | `gvr` (van Rossum) — language-design view | `rmh` (Hettinger) — idiomatic Python |
+| Protocol amendment / breaking change | `gvr` | `rmh` + cross-consumer review |
+| `dataclass` / pydantic model definitions | `rmh` | `gvr` |
+| Type-system features (`Protocol`, `TypeVar`, `Generic`) | `gvr` | `rmh` |
+| Documentation of contracts | `claude` (leader) | `gvr` — design-rationale narration |
+| Cross-repo coordination (when consumer must also change) | `claude` (leader) | `mcg` (Cagan) — coordinate the empowered teams |
+| Infra / CI / release | `adb` (Lovelace) | `kth` (Hightower) |
+
+A change to this repo without a corresponding consumer-update plan is not ready. Use the `standard` pipeline; in the design stage, list every consumer affected and the migration step for each.
+
 ## Standards References
 
 - [Python](https://github.com/punt-labs/punt-kit/blob/main/standards/python.md)
