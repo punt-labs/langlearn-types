@@ -64,7 +64,7 @@ This project uses **beads** (`bd`) for issue tracking. If an issue discovered he
 
 Identity: `agent: claude` per `.punt-labs/ethos.yaml`. Sub-agent calls match ethos identity handles.
 
-This repo is the *types* library. Every change here propagates to consumers (langlearn, langlearn-tts, langlearn-anki, langlearn-imagegen). Protocol stability is the load-bearing property — engage `gvr` (van Rossum) as evaluator on any protocol change. Worker and evaluator must be distinct handles with no shared role. Claude is the leader, never the evaluator.
+This repo is the *types* library. Every change here propagates to consumers (langlearn, langlearn-tts, langlearn-anki, langlearn-imagegen). Protocol stability is the load-bearing property — engage `gvr` (van Rossum) as evaluator on any protocol change. Within each row, the worker and evaluator must be distinct handles. Claude is the leader, never the evaluator.
 
 | Task type | Worker | Evaluator |
 |-----------|--------|-----------|
