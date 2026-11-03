@@ -81,3 +81,4 @@ A change to this repo without a corresponding consumer-update plan is not ready.
 - [Workflow](https://github.com/punt-labs/punt-kit/blob/main/standards/workflow.md)
 - [CLI](https://github.com/punt-labs/punt-kit/blob/main/standards/cli.md)
 - [Shell](https://github.com/punt-labs/punt-kit/blob/main/standards/shell.md)
+@.punt-labs/ethos/CLAUDE.md
