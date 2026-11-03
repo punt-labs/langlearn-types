@@ -10,6 +10,7 @@
 
 ### Fixed
 
+- ethos config resolves layered again so the engineering team, seeded pipelines and the claude leader identity resolve alongside the vendored gstack team
 - Action pin comments now state the version actually pinned. The SHA is
   the security control, but the comment is the only part a human reads,
   so a wrong one hides a stale pin from every review — how
